@@ -1,11 +1,15 @@
 {
   "name": "responsive-query",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.0",
   "description": "Query on the current mode of the screen for js",
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
     "test": "jest"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   },
   "repository": {
     "type": "git",
