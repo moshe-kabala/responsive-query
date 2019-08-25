@@ -1,0 +1,51 @@
+{
+  "name": "responsive-query",
+  "version": "1.0.0",
+  "description": "Query on the current mode of the screen for js",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moshe-kabala/responsive-query.git"
+  },
+  "keywords": [
+    "responsive",
+    "web",
+    "layout",
+    "media-query"
+  ],
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/lib/"
+    ],
+    "moduleNameMapper": {
+      "@/(.*)$": "<rootDir>/src/$1"
+    },
+    "testRegex": "\\.(test|spec)\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
+  },
+  "author": "Moshe Kabala",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/moshe-kabala/responsive-query/issues"
+  },
+  "homepage": "https://github.com/moshe-kabala/responsive-query#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.3"
+  }
+}
