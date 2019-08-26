@@ -3,8 +3,8 @@ const listeners = new Set<Function>();
 
 const __getWinSize = () =>
   Object.freeze({
-    width: (window.outerWidth as any)() as number,
-    height: (window.outerHeight as any)() as number
+    width: window.outerWidth as number,
+    height: window.outerHeight as number
   });
 
 let size = __getWinSize();
