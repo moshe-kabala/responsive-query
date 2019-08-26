@@ -14,6 +14,8 @@ type resQueryType = {
     TabletLandscape: boolean;
     TabletPortrait: boolean;
   };
+  isPortrait: boolean;
+  isLandscape: boolean;
   BigDesktop: BiggerOrSmaller;
   Desktop: BiggerOrSmaller;
   Smartphone: BiggerOrSmaller;
@@ -29,7 +31,15 @@ export function getResQuery(
   const resQuery = {
     is: {},
     getSize,
-    getCurrentMode
+    getCurrentMode,
+    get isLandscape() {
+      const s = getSize();
+      return !(s.height > s.width)
+    },
+    get isPortrait() {
+      const s = getSize();
+      return s.height > s.width
+    }
   } as any;
 
   for (const [p, opr] of [
