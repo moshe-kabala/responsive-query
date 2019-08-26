@@ -12,7 +12,8 @@ Query on the current mode of the screen for js
 
 ## Easy to use
 
-for example
+For example
+
 ```
 import resQuery from "responsive-query" 
 
@@ -32,11 +33,11 @@ if (resQuery.Desktop.andSmaller) { // return true only if the screen smaller tha
 ## Screen types
 Screen types divided to 
 
-BigDesktop: {from: 1800},
-Desktop: {from:1200, to: 1800 },
-TabletLandscape: {from:940 ,to: 1200},
-TabletPortrait: {from:640 ,to: 940},
-Smartphone: { to: 640},
+* BigDesktop: {from: 1800},
+* Desktop: {from:1200, to: 1800 },
+* TabletLandscape: {from:940 ,to: 1200},
+* TabletPortrait: {from:640 ,to: 940},
+* Smartphone: { to: 640},
 
 
 
