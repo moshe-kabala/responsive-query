@@ -1,6 +1,6 @@
 {
   "name": "responsive-query",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "description": "Query on the current mode of the screen for js",
   "main": "lib/index.js",
   "scripts": {
