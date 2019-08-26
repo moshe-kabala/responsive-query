@@ -6,7 +6,7 @@ Query on the current mode of the screen for js
 * Zero dependencies
 * Support typescript
 
-## easy to use
+## Easy to use
 
 for example
 ```

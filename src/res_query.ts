@@ -65,16 +65,16 @@ export function getResQuery(
 
   function isBetween({ from, to }) {
     const w = getSize().width;
-    return (!from || from <= w) && (!to || to > w);
+    return  from <= w &&  to > w;
   }
 
   function andBigger({ from, to }) {
     const w = getSize().width;
-    return !from || from <= w || (to && to < w);
+    return from  <= w;
   }
 
   function andSmaller({ from, to }) {
     const w = getSize().width;
-    return !from || from > w || (!to || to > w);
+    return to > w;
   }
 }
