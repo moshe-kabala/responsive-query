@@ -10,6 +10,9 @@ Query on the current mode of the screen for js
 
 for example
 ```
+import resQuery from "responsive-query" 
+
+
 if (resQuery.is.Desktop) { // return true only if the screen between 1200-1800
     // do something
 } 
