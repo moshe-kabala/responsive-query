@@ -5,6 +5,10 @@ Query on the current mode of the screen for js
 * Lightweight
 * Zero dependencies
 * Support typescript
+* Tested
+
+## Installation
+> npm i responsive-query
 
 ## Easy to use
 
