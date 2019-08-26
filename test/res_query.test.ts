@@ -5,17 +5,17 @@ import { ScreenTypes as st } from "../src/screen_types";
 import { ScreenSizes as ss } from "../src/screen_sizes";
 
 const testCases = Object.keys(st).map(key => [
-  [`Is ${ss[key].from - 1} ${key}`, ss.Desktop.from - 1, "is", key, false],
+  [`Is ${ss[key].from - 1} ${key}`, ss[key].from - 1, "is", key, false],
   [`Is ${ss[key].to + 1} ${key}`, ss[key].to + 1, "is", key, false],
   [`Is ${ss[key].to} ${key}`, ss[key].to, "is", key, false],
   [`Is ${ss[key].from} ${key}`, ss[key].from, "is", key, true],
   [`Is ${ss[key].to - 1} ${key}`, ss[key].to - 1, "is", key, true],
 
   [`${key} and bigger ${ss[key].to}`, ss[key].to + 1, key, "andBigger", true],
-  [`${key} and bigger ${ss[key].to}`, ss.Desktop.to, key, "andBigger", true],
+  [`${key} and bigger ${ss[key].to}`, ss[key].to, key, "andBigger", true],
   [
     `${key} and bigger ${ss[key].to - 1}`,
-    ss.Desktop.to - 1,
+    ss[key].to - 1,
     key,
     "andBigger",
     true
@@ -43,10 +43,10 @@ const testCases = Object.keys(st).map(key => [
     "andSmaller",
     false
   ],
-  [`${key} and smaller ${ss[key].to}`, ss.Desktop.to, key, "andSmaller", false],
+  [`${key} and smaller ${ss[key].to}`, ss[key].to, key, "andSmaller", false],
   [
     `${key} and smaller ${ss[key].to - 1}`,
-    ss.Desktop.to - 1,
+    ss[key].to - 1,
     key,
     "andSmaller",
     true
@@ -70,7 +70,6 @@ const testCases = Object.keys(st).map(key => [
 
 describe("Responsive query", () => {
   for (const cases of testCases) {
-    console.log(cases)
     for (const [text, width, propOne, propTow, expected] of cases) {
       test(text as any, () => {
         testCase(width, propOne, propTow, expected);
